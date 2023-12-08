@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+    color: whitesmoke;
+    font-weight: bold;
+    background: url("/IMG/9999520.jpg");
+    background-size: cover;
+    font-size: 25px;
+}
+
+h1 {
+    color: goldenrod;
+
+}
+
+button {
+    display: block;
+    margin: 5px auto;
+    width: 200px;
+    padding: 3px 0 3px 0;
+    font-size: 25px;
+    background-color: goldenrod;
+    color: #1b5928;
+    border: none;
+    border-radius: 3px;
+}
+
+label {
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+input {
+    display: block;
+    margin: 10px auto 10px auto;
+    border: none;
+}
