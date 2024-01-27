@@ -12,17 +12,7 @@ const sumEl = document.querySelector("#sum-el")
 const startGame = document.querySelector("#startGame-btn");
 const newCardEl = document.querySelector("#newCard-btn");
 const playerEl = document.querySelector("#player-el")
-
-
-startGame.addEventListener("click", () => {
-    isAlive = true;
-    hasBlackJack = false;
-    let firstCard = getRandomCard();
-    let secondCard = getRandomCard();
-    cards = [firstCard, secondCard];
-    sum = firstCard + secondCard;
-    renderGame()
-})
+const submitNameInput = document.querySelector("#submitName-input")
 
 function getRandomCard() {
     let randomCard = Math.floor((Math.random()*13)+1);
@@ -34,6 +24,17 @@ function getRandomCard() {
     return randomCard
 }
 }
+
+startGame.addEventListener("click", () => {
+    isAlive = true;
+    hasBlackJack = false;
+    let firstCard = getRandomCard();
+    let secondCard = getRandomCard();
+    cards = [firstCard, secondCard];
+    sum = firstCard + secondCard;
+    renderGame()
+})
+
 
 function renderGame() {
     sumEl.textContent = `Sum: ${sum}`;
@@ -76,3 +77,8 @@ newCardEl.addEventListener("click", () => {
     } 
 })
 
+submitNameInput.addEventListener("click", () =>{
+    var enteredName = document.getElementById("nameInput").value
+    player.name = enteredName
+    playerEl.textContent = `${player.name}: $${player.chips}`
+})
